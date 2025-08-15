@@ -63,7 +63,7 @@ export default function Home() {
       </p>
 
       <footer style={{ marginTop: '4rem', fontSize: '0.9rem', color: '#777' }}>
-        © {new Date().getFullYear()} CashPilot by Alex Trimnell. All rights reserved.
+        © {new Date().getFullYear()} CashPilot by Alexander Trimnell. All rights reserved.
       </footer>
     </div>
   );
