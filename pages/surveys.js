@@ -60,10 +60,43 @@ export default function Surveys() {
 
       <div style={{ marginTop: "2rem" }}>
         {platforms.map((platform) => (
-          <div key={platform.name} style={{
-            border: "1px solid #333",
-            borderRadius: "10px",
-            padding: "1rem",
+          <div
+            key={platform.name}
+            style={{
+              border: "1px solid #333",
+              borderRadius: "10px",
+              padding: "1rem",
+              marginBottom: "1.5rem",
+              backgroundColor: "#111",
+            }}
+          >
+            <h2 style={{ color: "#00BFFF" }}>{platform.name}</h2>
+            <p>{platform.description}</p>
+            <p>Referral Link: {platform.referral ? "✅ Active" : "❌ Not Supported"}</p>
+            <p>Auto-Refresh: {platform.autoRefresh ? "🔄 Enabled" : "🚫 Manual"}</p>
+            <a
+              href={platform.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{
+                display: "inline-block",
+                backgroundColor: "#00BFFF",
+                color: "#000",
+                padding: "0.5rem 1rem",
+                borderRadius: "6px",
+                textDecoration: "none",
+                fontWeight: "bold",
+                marginTop: "0.5rem",
+              }}
+            >
+              Visit Platform
+            </a>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+            }            padding: "1rem",
             marginBottom: "1.5rem",
             backgroundColor: "#111"
           }}>
