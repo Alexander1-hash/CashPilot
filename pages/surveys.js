@@ -54,7 +54,14 @@ const platforms = [
 
 export default function Surveys() {
   return (
-    <div style={{ background: "#000", color: "#C0C0C0", minHeight: "100vh", padding: "2rem" }}>
+    <div
+      style={{
+        background: "#000",
+        color: "#C0C0C0",
+        minHeight: "100vh",
+        padding: "2rem",
+      }}
+    >
       <h1 style={{ color: "#00BFFF" }}>🧩 CashPilot Survey Hub</h1>
       <p>Your curated list of trusted online earning platforms:</p>
 
@@ -64,6 +71,45 @@ export default function Surveys() {
             key={platform.name}
             style={{
               border: "1px solid #333",
+              borderRadius: "10px",
+              padding: "1rem",
+              marginBottom: "1.5rem",
+              backgroundColor: "#111",
+            }}
+          >
+            <h2 style={{ color: "#00BFFF" }}>{platform.name}</h2>
+            <p>{platform.description}</p>
+            <p>
+              Referral Link:{" "}
+              {platform.referral ? "✅ Active" : "❌ Not Supported"}
+            </p>
+            <p>
+              Auto-Refresh:{" "}
+              {platform.autoRefresh ? "🔄 Enabled" : "🚫 Manual"}
+            </p>
+            <a
+              href={platform.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{
+                display: "inline-block",
+                backgroundColor: "#00BFFF",
+                color: "#000",
+                padding: "0.5rem 1rem",
+                borderRadius: "6px",
+                textDecoration: "none",
+                fontWeight: "bold",
+                marginTop: "0.5rem",
+              }}
+            >
+              Visit Platform
+            </a>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}              border: "1px solid #333",
               borderRadius: "10px",
               padding: "1rem",
               marginBottom: "1.5rem",
