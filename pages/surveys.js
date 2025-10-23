@@ -95,22 +95,7 @@ export default function Surveys() {
   );
 }    link: "https://timebucks.com/?referral=alextrimnell",
   },
-  {
-    name: "Triaba",
-    description: "Nigeria-supported surveys",
-    referral: true,
-    autoRefresh: false,
-    link: "https://www.triaba.com/?ref=alextrimnell",
-  },
-  {
-    name: "Surveytime",
-    description: "$1 instantly per survey",
-    referral: true,
-    autoRefresh: false,
-    link: "https://surveytime.io/alextrimnell",
-  },
-];
-
+  
 export default function Surveys() {
   return (
     <div style={{ background: "#000", color: "#C0C0C0", minHeight: "100vh", padding: "2rem" }}>
