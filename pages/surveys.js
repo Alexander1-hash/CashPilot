@@ -1,53 +1,72 @@
-// pages/surveys.js
+import Head from "next/head";
 
-const platforms = [
-  {
-    name: "DigiOpinion",
-    description: "Quick paid surveys; global reach",
-    referral: false,
-    autoRefresh: true,
-    link: "https://www.digiopinion.com",
-  },
-  {
-    name: "ySense",
-    description: "Surveys, tasks, and offers",
-    referral: true,
-    autoRefresh: true,
-    link: "https://www.ysense.com/?ref=alextrimnell",
-  },
-  {
-    name: "Swagbucks",
-    description: "Surveys + cashback + gift cards",
-    referral: true,
-    autoRefresh: false,
-    link: "https://www.swagbucks.com/p/register?rb=alextrimnell",
-  },
-  {
-    name: "Toluna Influencers",
-    description: "Survey community with product testing",
-    referral: true,
-    autoRefresh: false,
-    link: "https://www.toluna.com/ref/alextrimnell",
-  },
-  {
-    name: "TimeBucks",
-    description: "Tasks, TikTok follows, microjobs",
-    referral: true,
-    autoRefresh: true,
-    link: "https://timebucks.com/?referral=alextrimnell",
-  },
-  {
-    name: "Triaba",
-    description: "Nigeria-supported surveys",
-    referral: true,
-    autoRefresh: false,
-    link: "https://www.triaba.com/?ref=alextrimnell",
-  },
-  {
-    name: "Surveytime",
-    description: "$1 instantly per survey",
-    referral: true,
-    autoRefresh: false,
+export default function Surveys() {
+  const surveys = [
+    {
+      name: "Triaba",
+      description: "Nigeria-supported surveys with fair payouts.",
+      link: "https://www.triaba.com",
+    },
+    {
+      name: "OpinionWorld",
+      description: "Get paid for sharing your opinions on trending topics.",
+      link: "https://www.opinionworld.com",
+    },
+    {
+      name: "YouGov",
+      description: "Participate in surveys about brands, politics, and culture.",
+      link: "https://ng.yougov.com/",
+    },
+    {
+      name: "SurveyTime",
+      description: "Instant $1 rewards for each completed survey — no waiting.",
+      link: "https://surveytime.io/",
+    },
+  ];
+
+  return (
+    <>
+      <Head>
+        <title>CashPilot Surveys</title>
+        <meta
+          name="description"
+          content="Discover legit survey platforms that pay daily."
+        />
+      </Head>
+
+      <div className="min-h-screen bg-black text-white flex flex-col items-center justify-center py-12 px-4">
+        <h1 className="text-3xl font-bold mb-8 text-blue-400">
+          💸 Trusted Survey Platforms
+        </h1>
+        <p className="text-gray-300 text-center max-w-xl mb-6">
+          Choose from verified, high-paying survey sites that work worldwide —
+          start earning daily with honest platforms we’ve tested.
+        </p>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full max-w-3xl">
+          {surveys.map((survey, index) => (
+            <a
+              key={index}
+              href={survey.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="border border-blue-700 rounded-2xl p-6 hover:bg-blue-900 transition-all duration-300"
+            >
+              <h2 className="text-xl font-semibold mb-2 text-blue-300">
+                {survey.name}
+              </h2>
+              <p className="text-gray-400">{survey.description}</p>
+            </a>
+          ))}
+        </div>
+
+        <div className="mt-12 text-center text-sm text-gray-500">
+          CashPilot.link © {new Date().getFullYear()} | Built for honest earnings 💠
+        </div>
+      </div>
+    </>
+  );
+            }    autoRefresh: false,
     link: "https://surveytime.io/alextrimnell",
   },
 ];
