@@ -94,7 +94,6 @@ export default function Surveys() {
     </div>
   );
 }    link: "https://timebucks.com/?referral=alextrimnell",
-  },
   
 export default function Surveys() {
   return (
